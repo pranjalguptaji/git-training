@@ -98,7 +98,7 @@ resource "aws_elb" "terra-elb" {
 		unhealthy_threshold = 2
 		timeout = 3
 		target = "http:8000/"
-		interval = 30
+		interval = 20
 	}
 	instances = [aws_instance.instance_with_volume.id]
 	cross_zone_load_balancing = true
